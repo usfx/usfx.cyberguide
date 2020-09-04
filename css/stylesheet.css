@@ -1,0 +1,253 @@
+/*sections------------------------------------------------------------------- */
+body {
+    margin: 0;
+	padding: 0;
+  background-color: #BFBBB2;
+  font-family: Georgia, "Times New Roman", Times, Serif;
+  color: #333;
+  font-size: 100%;
+  line-height: 20px;
+}
+#wrapper {
+    max-width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #FFFAEE;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+   "banner"
+   "menu"
+   "nav"
+   "table"
+   "main"
+   "aside"
+   "footer";
+}
+
+@media (min-width: 50em) {
+    .menu li
+ {
+  display: inline;
+  margin: 0 1em 0 0;
+ }
+ .menu a
+ {
+  display: inline;
+  padding: 0;
+  border-bottom: 0;
+ }
+  #wrapper {
+    grid-template-columns: 3fr 6fr;
+    grid-template-areas: 
+      "banner  banner"
+      "menu  menu"
+      "nav  table"
+      "aside  main"
+      "footer  footer";
+  }
+}
+
+
+@media (min-width: 60em) {
+  #wrapper {
+    grid-template-columns: 3fr 5fr 3fr;
+    grid-template-areas: 
+      "banner  banner  banner"
+      "menu  menu  menu"
+      "nav  table  aside"
+      "nav  main  aside"
+      "footer  footer  footer";
+   }
+}
+
+
+@media (max-width: 35em) {
+ table {
+  display:none;
+ }
+}
+
+.banner {grid-area: banner;}
+
+
+main  {grid-area: main;}
+
+table {grid-area: table;}
+
+
+article	{
+}
+
+aside	{grid-area: aside;}
+
+
+footer {grid-area: footer;}
+
+
+header {margin-top: -20px;
+	margin-bottom: -20px;
+}
+.post	{
+    margin-top: 2px;
+	margin-bottom: 2px;
+	background-color: #CCC;
+}
+
+nav	{grid-area: nav;}
+
+.menu {grid-area: menu;}
+
+
+.menu ul{
+     list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #121F4F;
+}
+.menu li{float: left;
+  border-right:1px solid #bbb;}
+.menu li:last-child {
+  border-right: none;
+}
+
+.menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 18px 18px;
+  text-decoration: none;
+}
+
+.menu li a:hover:not(.active) {
+  background-color: #00E5FF;
+}
+
+.menu .active {
+    background-color: #4CAF50;}
+
+/*headings------------------------------------------------------------------- */
+h1	{font-family: Georgia, "Times New Roman", Times, serif;
+  color: #3D403E;
+  font-size: 40px;
+  line-height: 30px;
+}
+h2	{
+    font-size: 25px;
+	line-height: 26px;
+	color: #3D403E;
+}
+h3 	{
+    color: #F14A29;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+h4 	{
+    color: #0000ff;
+	font-size: 25px;
+	line-height: 26px;
+}
+
+
+
+/*grouping------------------------------------------------------------------- */
+p	{
+    font-size:1.25rem;
+ line-height: 1.5;
+ margin: 20px 0 10px 0;
+}
+blockquote	{
+}
+/*lists---------------------------------------------------------------------- */
+ul	{
+    list-style-type: disc;
+	line-height: 20px;
+}
+li	{
+    margin-left: 22px;
+	line-height: 22px;
+}
+ol	{list-style-type: decimal;
+	line-height: 16px;
+}
+dl	{
+    line-height: 20px;
+}
+dt	{
+    font-weight: bolder;
+}
+dd	{text-indent: 10px;
+}
+.menu li	{
+  list-style-type: none;
+  font-size: 18px;
+  margin-left: 0px;
+  margin-bottom: 1px;
+}
+.menu a {
+  color: #000;
+  padding: 6px;
+  margin-right: 0px;
+  text-decoration: none;
+  border: 0px solid #0090D2;
+  border-radius: 30px;
+}
+.menu a:hover {
+  background-color: #0090D2;
+  color: #FFF;
+}
+/*text------------------------------------------------------------------------ */
+em	{
+}
+strong	{
+}
+small	{
+}
+cite	{
+}
+time	{
+}
+/*image----------------------------------------------------------------------- */
+figure	{
+}
+figcaption	{
+}
+img	{
+    margin: 20px;
+	border: 2px solid #CCC;
+}
+/*anchors--------------------------------------------------------------------- */
+a:link	{color: #0005FF;
+}
+a:visited {color: #0005FF;
+}
+a:hover {color: #0063A6;
+    text-decoration: none;
+}
+a:active {color: #0005FF;
+}
+
+
+
+label {display: block;}
+input {display: block;}
+
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+th {
+  text-align: left;
+}
